@@ -1,0 +1,499 @@
+:root {
+  --pink: #a2d9ff;
+  --bg: #0a0a0a;
+  --shadow: 0 2px 2px rgb(0 0 0 /0.5);
+  min-height: 2000px;
+}
+
+body {
+  font-size: 1.2rem;
+  font-family: "Playfair Display", serif;
+}
+
+/* Hero */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(img/pexels-marvin-malmis-ponce-13470027.jpg);
+  background-size: cover;
+  z-index: -1;
+  filter: blur();
+}
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+}
+
+.hero h1,
+.hero h4,
+.hero p {
+  text-shadow: 3px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.hero h1 {
+  font-family: "Sacramento", cursive;
+  font-size: 6rem;
+}
+
+.hero h4 {
+  font-size: 1.6rem;
+}
+
+.hero p {
+  font-size: 1.4rem;
+  font-family: "Playfair Display", serif;
+}
+/* Akhir Hero */
+
+/* Button */
+.button {
+  height: 50px;
+  width: 200px;
+  position: relative;
+  background-color: var(--pink);
+  cursor: pointer;
+  border: 2px solid #f5f2f200;
+  overflow: hidden;
+  border-radius: 30px;
+  color: #fdf9f9;
+  transition: all 0.5s ease-in-out;
+  margin-top: 10px;
+}
+
+.btn-txt {
+  z-index: 1;
+  font-weight: 600;
+}
+
+.type1::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: all 0.5s ease-in-out;
+  background-color: var(--pink);
+  border-radius: 30px;
+  visibility: hidden;
+  height: 10px;
+  width: 10px;
+  z-index: -1;
+}
+
+button:hover {
+  background-color: var(--pink);
+  box-shadow: 0px 15px 20px rgba(255, 255, 255, 0.4);
+  color: #fff;
+  transform: translateY(-7px);
+}
+
+.type1:hover::after {
+  background-color: var(--pink);
+  transform: scale(100) translateX(2px);
+}
+/* Akhir Button */
+
+/* Countdown */
+.simply-countdown {
+  overflow: hidden;
+  display: table;
+  font-family: "Arial", sans-serif;
+  margin: auto;
+}
+.simply-countdown > .simply-section {
+  width: 50px;
+  height: 50px;
+  padding: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  float: left;
+  margin: 10px;
+  background: var(--pink);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  border-radius: 40%;
+}
+
+.simply-countdown > .simply-section .simply-word {
+  display: block;
+  text-align: center;
+}
+
+.simply-countdown > .simply-section .simply-amount {
+  font-size: 1.6rem;
+}
+
+/* Akhir Coundown */
+
+/* Media Queries */
+/* Laptop */
+@media (max-width: 992px) {
+  html {
+    font-size: 80%;
+  }
+  .simply-countdown > .simply-section {
+    width: 50px;
+    height: 50px;
+    padding: 50px;
+  }
+  .hero::before {
+    background-position: center;
+  }
+  .button {
+    width: 170px;
+  }
+  .nav1,
+  .nav2 {
+    bottom: 0;
+  }
+}
+
+/* Tablet */
+
+@media (max-width: 768px) {
+  html {
+    font-size: 70%;
+  }
+  .simply-countdown > .simply-section {
+    width: 40px;
+    height: 40px;
+    padding: 40px;
+    margin: 5px;
+  }
+  .hero::before {
+    background-position: center;
+  }
+  .button {
+    width: 150px;
+  }
+  .nav2 {
+    bottom: 0;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 576px) {
+  html {
+    font-size: 60%;
+  }
+  .simply-countdown > .simply-section {
+    width: 30px;
+    height: 30px;
+    padding: 30px;
+    margin: 3px;
+  }
+  .hero::before {
+    background-position: center;
+  }
+  .button {
+    width: 120px;
+  }
+}
+/* About */
+#About {
+  position: relative;
+}
+
+.nav1,
+.nav2 {
+  position: absolute;
+  left: 0;
+  width: 100%;
+}
+
+.nav1 {
+  top: 0;
+}
+
+.nav2 {
+  bottom: -98px;
+  top: 630px;
+}
+
+#About main {
+  margin-top: 300px;
+}
+
+#About h2 {
+  font-family: "Sacramento", cursive;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+#About p {
+  font-size: 1.2rem;
+}
+
+@media (max-width: 576px) {
+  .nav2 {
+    bottom: -110px;
+  }
+
+  #About main {
+    margin-top: 100px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+  #About main {
+    margin-top: 250px;
+  }
+  .nav2 {
+    bottom: -200px;
+  }
+}
+/* Galler */
+#gallery::before {
+  content: "";
+  position: absolute;
+  top: 95px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(img/pexels-marvin-malmis-ponce-13470028.jpg);
+  background-size: cover;
+  z-index: -1;
+  filter: blur(3px);
+}
+
+@media screen and (max-width: 576px) {
+  #gallery::before {
+    top: 0;
+    background-size: cover;
+    position: absolute;
+  }
+}
+
+#gallery {
+  position: relative;
+  padding: 50px;
+  margin-top: 100px;
+  background-size: cover;
+  background-position: center;
+}
+
+#gallery h2 {
+  font-family: "Playfair Display", serif;
+  text-align: center;
+  font-size: 3rem;
+  margin-top: 100px;
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.poto {
+  flex: 0 0 calc(25% - 10px);
+  max-width: calc(25% - 10px);
+  height: auto;
+  border-radius: 10px;
+  transition: transform 300ms ease-in-out;
+}
+
+.poto + .poto {
+  margin-left: 10px;
+}
+
+.poto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.poto:hover {
+  transform: rotate(-6deg) scale(1.1);
+  z-index: 1;
+  box-shadow: 0 10px 20px 0 rgba(10, 10, 10, 0.7);
+}
+@media screen and (max-width: 769) {
+  .poto {
+    flex: 0 0 calc(50% - 30px);
+    max-width: calc(50% - 30px);
+  }
+  #gallery::before {
+    top: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .poto {
+    flex: 0 0 calc(50% - 20px);
+    max-width: calc(50% - 20px);
+  }
+  #gallery::before {
+    top: 55px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+  }
+  #gallery {
+    margin-top: 30px;
+  }
+}
+
+/* Maps */
+
+#maps {
+  position: relative;
+  padding: 50px;
+  margin-top: 100px;
+  text-align: center;
+}
+
+#maps .svg {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  top: -50px;
+  height: 100%;
+}
+
+#maps h2 {
+  text-align: center;
+  font-size: 3rem;
+  margin-top: 10px;
+  font-family: "Playfair Display", serif;
+  margin-bottom: 30px;
+  color: black;
+}
+
+#maps .img {
+  margin-bottom: 100px;
+}
+
+#maps p {
+  font-size: 1.2rem;
+  color: black;
+  text-align: center;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  font-family: "Playfair Display", serif;
+  line-height: 1.5;
+  letter-spacing: 1px;
+}
+
+#maps img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  bottom: 200px;
+}
+
+#maps img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 30px 0 rgba(10, 10, 10, 0.9);
+}
+
+div.map-container {
+  width: 300px;
+  height: 300px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  transition: transform 300ms ease-in-out;
+  overflow: hidden;
+  margin: 0 auto;
+  margin-bottom: 100px;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.map-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+/* CSS untuk div.pesan */
+.pesan {
+  width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+/* CSS untuk h1 */
+.pesan h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* CSS untuk label */
+.pesan label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+/* CSS untuk input[type="text"], input[type="email"], textarea */
+.pesan input[type="text"],
+.pesan input[type="email"],
+.pesan textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+/* CSS untuk textarea */
+.pesan textarea {
+  resize: vertical;
+}
+
+/* CSS untuk input[type="submit"] */
+.pesan input[type="submit"] {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #a2d9ff;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* CSS untuk input[type="submit"]:hover */
+.pesan input[type="submit"]:hover {
+  background-color: #a2d9ff;
+}
+
+/* CSS untuk input[type="submit"]:focus */
+.pesan input[type="submit"]:focus {
+  outline: none;
+}
+footer {
+  padding: 20px;
+  justify-content: center;
+  text-align: center;
+}
+footer img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
